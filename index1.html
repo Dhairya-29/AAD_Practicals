@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Closest Sum to Zero</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Find Two Elements with Sum Closest to Zero</h1>
+        <form method="post">
+            <label for="numbers">Enter numbers (comma-separated):</label>
+            <input type="text" id="numbers" name="numbers" required>
+            <button type="submit">Find Pair</button>
+        </form>
+        {% if result %}
+            <h2>Result</h2>
+            <p>The pair of numbers with sum closest to zero is: {{ result[0] }} and {{ result[1] }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

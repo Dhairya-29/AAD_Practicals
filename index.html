@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Marks Comparison</title>
+</head>
+<body>
+    <h1>Enter Marks for Chefs</h1>
+    <form method="post" action="/xyz">
+        <h2>Chef 1:</h2>
+        <input type="number" name="a0" required><br>
+        <input type="number" name="a1" required><br>
+        <input type="number" name="a2" required><br>
+
+        <h2>Chef 2:</h2>
+        <input type="number" name="b0" required><br>
+        <input type="number" name="b1" required><br>
+        <input type="number" name="b2" required><br>
+ 
+        <button type="submit">Compare</button>
+    </form>
+    
+    {% if result %}
+        <h2>Result:</h2>
+        <p>Count for Chef 1: {{ result[0] }}</p>
+        <p>Count for Chef 2: {{ result[1] }}</p>
+    {% endif %}
+</body>
+</html>
